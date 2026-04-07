@@ -471,155 +471,81 @@ footer {
       <!-- ══ S0: BIENVENIDA ══ -->
       <div class="screen active" id="s-welcome">
         <div class="hero">
-          <div class="hero-eyebrow">
-            <svg width="10" height="10" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="currentColor"/></svg>
-            Instrumento de relevamiento
-          </div>
           <h1><strong>Índice de Brecha Digital en el trabajo</strong></h1>
-          <p><strong>Medí tu exposición a la Inteligencia Artificial Generativa en tres dimensiones: acceso tecnológico, habilidades digitales y vulnerabilidad laboral.</strong></p>
-        </div>
-
-        <!-- METODOLOGÍA -->
-        <div class="card" style="margin-bottom:12px">
-          <div class="card-title">¿Qué medimos y cómo?</div>
-          <p style="font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:14px" id="meto-intro">
-            Este instrumento evalúa la <strong style="color:var(--text)">brecha digital laboral</strong> a través del Índice de Brecha Digital (IBD), un puntaje entre 0 y 100 que combina tres dimensiones del trabajo en la era de la IA. Cuanto más alto el puntaje, menor es la brecha.
-          </p>
-
-          <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:14px">
-            <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:var(--dim-a-dim);border-radius:var(--r-sm);border-left:3px solid var(--dim-a)">
-              <span style="font-size:16px;font-weight:600;color:var(--dim-a);min-width:20px">A</span>
-              <div>
-                <div style="font-size:13px;font-weight:500;color:var(--text);margin-bottom:2px">Acceso tecnológico</div>
-                <div style="font-size:12px;color:var(--text2);line-height:1.5" id="meto-a">Evalúa si contás con los dispositivos, la conectividad y las herramientas de IA necesarias para trabajar en el contexto actual.</div>
-              </div>
-            </div>
-            <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:var(--dim-b-dim);border-radius:var(--r-sm);border-left:3px solid var(--dim-b)">
-              <span style="font-size:16px;font-weight:600;color:var(--dim-b);min-width:20px">B</span>
-              <div>
-                <div style="font-size:13px;font-weight:500;color:var(--text);margin-bottom:2px">Habilidades digitales</div>
-                <div style="font-size:12px;color:var(--text2);line-height:1.5" id="meto-b">Mide tus competencias reales para usar herramientas digitales e IA: desde lo básico hasta la capacidad de evaluar y cuestionar los resultados que genera.</div>
-              </div>
-            </div>
-            <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:var(--dim-c-dim);border-radius:var(--r-sm);border-left:3px solid var(--dim-c)">
-              <span style="font-size:16px;font-weight:600;color:var(--dim-c);min-width:20px">C</span>
-              <div>
-                <div style="font-size:13px;font-weight:500;color:var(--text);margin-bottom:2px" id="meto-c-title">Exposición a la IA</div>
-                <div style="font-size:12px;color:var(--text2);line-height:1.5" id="meto-c">Analiza en qué medida las tareas de tu trabajo son repetitivas o requieren juicio humano, y cuánto ya está siendo transformado por la IA.</div>
-              </div>
-            </div>
-          </div>
-
-          <div style="background:var(--surface2);border-radius:var(--r-sm);padding:10px 14px;display:flex;align-items:center;gap:10px">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex-shrink:0"><circle cx="8" cy="8" r="7" stroke="var(--accent)" stroke-width="1.5"/><rect x="7.25" y="6.5" width="1.5" height="5.5" rx=".75" fill="var(--accent)"/><circle cx="8" cy="4.5" r=".85" fill="var(--accent)"/></svg>
-            <p style="font-size:12px;color:var(--text3);line-height:1.5;margin:0">El instrumento fue desarrollado por <strong style="color:var(--text2)">BROD — Brechas y Oportunidades Digitales</strong> con base en marcos internacionales de análisis del impacto de la IA en el trabajo (OIT, OCDE, DigComp). Las respuestas son anónimas y confidenciales.</p>
-          </div>
-
-          <div style="margin-top:10px;background:var(--surface2);border-radius:var(--r-sm);padding:12px 14px;border-left:3px solid var(--accent)">
-            <div style="font-size:11px;font-weight:500;color:var(--accent);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px">Respaldo científico</div>
-            <div style="display:flex;flex-direction:column;gap:8px">
-              <div style="font-size:12px;color:var(--text2);line-height:1.55">
-                <strong style="color:var(--text)">SHRM (2025)</strong> — <em>Jobs at Risk: U.S. Employment in the New Age of Automation.</em> Estima que el 12,6% del empleo en EE.UU. (19,2 millones de puestos) enfrenta riesgo alto o muy alto de desplazamiento por automatización. El riesgo varía significativamente por tipo de ocupación e industria, siendo mayor en operadores de maquinaria, soporte administrativo y servicios financieros.
-              </div>
-              <div style="height:1px;background:var(--border)"></div>
-              <div style="font-size:12px;color:var(--text2);line-height:1.55">
-                <strong style="color:var(--text)">Massenkoff & McCrory — Anthropic (2026)</strong> — <em>Labor market impacts of AI: A new measure and early evidence.</em> Introduce la medida de "exposición observada" que combina capacidad teórica de LLMs con datos reales de uso. Encuentra que los programadores (74,5%), representantes de atención al cliente (70,1%) y operadores de ingreso de datos (67,1%) son los perfiles más expuestos actualmente. No se detecta aún impacto sistemático en el desempleo general, aunque hay señales tempranas de desaceleración en contratación de jóvenes de 22 a 25 años en ocupaciones expuestas.
-              </div>
-            </div>
-          </div>
+          <p>Descubrí tu nivel de preparación frente a la Inteligencia Artificial en 10 minutos.</p>
         </div>
 
         <div class="card">
-          <div class="card-title">Seleccioná tu perfil</div>
+          <div class="card-title">¿Quién sos?</div>
           <div class="profile-grid">
             <div class="profile-card" id="pc-worker" onclick="selectProfile('worker')">
               <div class="profile-icon">👷</div>
               <div class="profile-name">Trabajador/a</div>
-              <div class="profile-desc">Evaluá tus propias habilidades y exposición a la IA</div>
-              <span class="profile-badge">Módulos A · B · C</span>
+              <div class="profile-desc">Evaluá tus habilidades y exposición a la IA</div>
             </div>
             <div class="profile-card" id="pc-employer" onclick="selectProfile('employer')">
               <div class="profile-icon">🏢</div>
               <div class="profile-name">Empleador/a</div>
               <div class="profile-desc">Evaluá las capacidades digitales de tu organización</div>
-              <span class="profile-badge">Módulos A · B · C</span>
             </div>
           </div>
+
           <div class="dim-map" id="dim-map">
             <div class="dim-chip">
               <span class="dim-chip-letter">A</span>
-              <div class="dim-chip-name">Acceso tecnológico</div>
+              <div class="dim-chip-name">Acceso</div>
             </div>
             <div class="dim-chip">
               <span class="dim-chip-letter">B</span>
-              <div class="dim-chip-name">Habilidades digitales</div>
+              <div class="dim-chip-name">Habilidades</div>
             </div>
             <div class="dim-chip" id="dim-c-chip">
               <span class="dim-chip-letter">C</span>
-              <div class="dim-chip-name" id="dim-c-name">Exposición a la IA</div>
+              <div class="dim-chip-name" id="dim-c-name">Exposición a IA</div>
             </div>
           </div>
-          <button class="btn btn-primary btn-lg" id="btn-start" onclick="startSurvey()" disabled style="width:100%">Comenzar →</button>
-          <div class="meta-row">
-            <span class="meta-item">⏱ 10–15 min</span>
-            <span class="meta-item">🔐 Datos protegidos</span>
-            <span class="meta-item">📊 IBD inmediato</span>
-          </div>
-        </div>
-      </div>
 
-      <!-- ══ S0b: DATOS DE IDENTIDAD ══ -->
-      <div class="screen" id="s-identity">
-        <div style="text-align:center;padding:1.5rem 0 1rem">
-          <div class="hero-eyebrow">
-            <svg width="10" height="10" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="currentColor"/></svg>
-            Datos de identificación
+          <button class="btn btn-primary btn-lg" id="btn-start" onclick="startSurvey()" disabled style="width:100%">Comenzar →</button>
+
+          <div class="meta-row">
+            <span class="meta-item">⏱ 10 min</span>
+            <span class="meta-item">🔒 Anónimo</span>
+            <span class="meta-item">📊 Resultado inmediato</span>
           </div>
-          <p style="font-size:14px;color:var(--text2);max-width:420px;margin:0 auto">Estos datos son confidenciales y se utilizan únicamente para identificar tu resultado.</p>
-        </div>
-        <div class="card">
-          <div class="card-title">Información personal</div>
-          <div class="field-group">
-            <div class="field-row">
-              <div class="field">
-                <label class="field-label" for="f-apellido">Apellido</label>
-                <input class="field-input" type="text" id="f-apellido" placeholder="Ej: García" autocomplete="family-name">
-                <span class="field-error" id="err-apellido"></span>
-              </div>
-              <div class="field">
-                <label class="field-label" for="f-nombre">Nombre</label>
-                <input class="field-input" type="text" id="f-nombre" placeholder="Ej: María" autocomplete="given-name">
-                <span class="field-error" id="err-nombre"></span>
-              </div>
-            </div>
-            <div class="field">
-              <label class="field-label" for="f-fecha">Fecha de nacimiento</label>
-              <input class="field-input field-mono" type="text" id="f-fecha" placeholder="dd.mm.aa" maxlength="8" inputmode="numeric" oninput="formatFecha(this)">
-              <span class="field-hint">Formato día.mes.año — Ej: 15.06.85</span>
-              <span class="field-error" id="err-fecha"></span>
-            </div>
-            <div class="field">
-              <label class="field-label" for="f-ciudad">Ciudad</label>
-              <input class="field-input" type="text" id="f-ciudad" placeholder="Ej: Corrientes" autocomplete="address-level2">
-              <span class="field-error" id="err-ciudad"></span>
-            </div>
-            <div class="field">
-              <label class="field-label" for="f-email">Correo electrónico</label>
-              <input class="field-input" type="email" id="f-email" placeholder="nombre@dominio.com" autocomplete="email" inputmode="email">
-              <span class="field-error" id="err-email"></span>
-            </div>
-            <div class="field">
-              <label class="field-label" for="f-celular">Celular</label>
-              <input class="field-input field-mono" type="tel" id="f-celular" placeholder="Ej: 3794 123456" autocomplete="tel" inputmode="tel">
-              <span class="field-error" id="err-celular"></span>
-            </div>
+
+          <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--border);text-align:center">
+            <button onclick="toggleMeto()" style="background:none;border:none;cursor:pointer;font-size:12px;color:var(--text3);font-family:var(--font)">
+              ¿Cómo funciona? <span id="meto-arrow">▼</span>
+            </button>
           </div>
-          <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--border)">
-            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:1rem;background:var(--surface2);border-radius:var(--r-sm);padding:10px 12px">
-              <svg width="16" height="16" viewBox="0 0 16 16" style="flex-shrink:0;margin-top:1px" fill="none"><circle cx="8" cy="8" r="7" stroke="var(--accent)" stroke-width="1.5"/><rect x="7.25" y="6.5" width="1.5" height="5.5" rx=".75" fill="var(--accent)"/><circle cx="8" cy="4.5" r=".85" fill="var(--accent)"/></svg>
-              <span style="font-size:12px;color:var(--text3);line-height:1.5">Tus datos son confidenciales y no serán compartidos con terceros. Se utilizan únicamente para identificar tu resultado dentro del programa BROD.</span>
+
+          <div id="meto-panel" style="display:none;margin-top:12px">
+            <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:10px">
+              <div style="display:flex;gap:10px;align-items:flex-start;padding:8px 10px;background:var(--dim-a-dim);border-radius:var(--r-sm);border-left:3px solid var(--dim-a)">
+                <span style="font-size:14px;font-weight:600;color:var(--dim-a);min-width:18px">A</span>
+                <div>
+                  <div style="font-size:12px;font-weight:500;color:var(--text)" id="meto-a-title">Acceso tecnológico</div>
+                  <div style="font-size:11px;color:var(--text2);line-height:1.5;margin-top:1px" id="meto-a">Dispositivos, conectividad y herramientas de IA disponibles para tu trabajo.</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:10px;align-items:flex-start;padding:8px 10px;background:var(--dim-b-dim);border-radius:var(--r-sm);border-left:3px solid var(--dim-b)">
+                <span style="font-size:14px;font-weight:600;color:var(--dim-b);min-width:18px">B</span>
+                <div>
+                  <div style="font-size:12px;font-weight:500;color:var(--text)">Habilidades digitales</div>
+                  <div style="font-size:11px;color:var(--text2);line-height:1.5;margin-top:1px" id="meto-b">Competencias para usar herramientas digitales e IA en tu trabajo diario.</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:10px;align-items:flex-start;padding:8px 10px;background:var(--dim-c-dim);border-radius:var(--r-sm);border-left:3px solid var(--dim-c)">
+                <span style="font-size:14px;font-weight:600;color:var(--dim-c);min-width:18px">C</span>
+                <div>
+                  <div style="font-size:12px;font-weight:500;color:var(--text)" id="meto-c-title">Exposición a la IA</div>
+                  <div style="font-size:11px;color:var(--text2);line-height:1.5;margin-top:1px" id="meto-c">Cuánto de tu trabajo puede ser automatizado y cómo te estás adaptando.</div>
+                </div>
+              </div>
             </div>
-            <button class="btn btn-primary btn-lg" onclick="submitIdentity()" style="width:100%">Continuar con el cuestionario →</button>
+            <p style="font-size:11px;color:var(--text3);line-height:1.5;text-align:center">
+              Instrumento desarrollado por <strong style="color:var(--text2)">BROD</strong> con base en evidencia de SHRM (2025) y Anthropic (2026).
+            </p>
           </div>
         </div>
       </div>
@@ -874,9 +800,21 @@ function selectProfile(p) {
   document.getElementById('meto-c').textContent     = m.c;
 }
 
+function toggleMeto() {
+  const panel = document.getElementById('meto-panel');
+  const arrow = document.getElementById('meto-arrow');
+  const open = panel.style.display === 'none';
+  panel.style.display = open ? 'block' : 'none';
+  arrow.textContent = open ? '▲' : '▼';
+}
+
 function startSurvey() {
-  // Go to identity form first
-  switchScreen('s-identity');
+  questions = profile === 'worker' ? WORKER_Q : EMPLOYER_Q;
+  answers = new Array(questions.length).fill(null);
+  qIdx = 0;
+  document.getElementById('top-progress').style.display = 'flex';
+  renderQ();
+  switchScreen('s-survey');
 }
 
 // ── IDENTITY DATA ──────────────────────────────────────────────
@@ -1393,14 +1331,13 @@ function showResults() {
 
   <!-- IDENTITY HEADER -->
   <div class="card" style="margin-bottom:12px;display:flex;align-items:center;gap:14px">
-    <div style="width:44px;height:44px;border-radius:50%;background:var(--accent-dim);border:1.5px solid rgba(124,107,250,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:17px;font-weight:600;color:var(--accent)">
-      ${identity.nombre ? identity.nombre[0].toUpperCase() : '?'}${identity.apellido ? identity.apellido[0].toUpperCase() : ''}
+    <div style="width:44px;height:44px;border-radius:50%;background:var(--accent-dim);border:1.5px solid rgba(124,107,250,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px">
+      ${profile === 'worker' ? '👷' : '🏢'}
     </div>
-    <div style="flex:1;min-width:0">
-      <div style="font-size:15px;font-weight:500;color:var(--text)">${identity.apellido || ''}, ${identity.nombre || ''}</div>
-      <div style="font-size:12px;color:var(--text3);font-family:var(--mono);margin-top:2px">${identity.ciudad || ''} · ${identity.fecha || ''} · ${identity.email || ''}</div>
+    <div>
+      <div style="font-size:15px;font-weight:500;color:var(--text)">${profile === 'worker' ? 'Trabajador/a' : 'Empleador/a'}</div>
+      <div style="font-size:12px;color:var(--text3);margin-top:2px">${new Date().toLocaleDateString('es-AR', {day:'2-digit', month:'long', year:'numeric'})}</div>
     </div>
-    <div style="font-size:11px;color:var(--text3);text-align:right;flex-shrink:0;font-family:var(--mono)">${new Date().toLocaleDateString('es-AR')}</div>
   </div>
 
   <!-- SCORE HERO -->
@@ -2002,7 +1939,7 @@ function generarPDF() {
     return '#E8F4ED';
   };
 
-  const ini = ((identity.nombre||'?')[0] + (identity.apellido||'?')[0]).toUpperCase();
+  const ini = profile === 'worker' ? 'T' : 'E';
   const dateStr = new Date().toLocaleDateString('es-AR', {day:'2-digit', month:'long', year:'numeric'});
 
   const dimBlock = (d) => {
@@ -2076,7 +2013,7 @@ function generarPDF() {
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Reporte IBD — ${identity.apellido}, ${identity.nombre}</title>
+<title>Reporte IBD — BROD</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   * { box-sizing:border-box; margin:0; padding:0; }
@@ -2201,8 +2138,8 @@ function generarPDF() {
     <div class="identity">
       <div class="avatar">${ini}</div>
       <div>
-        <div class="id-name">${identity.apellido || ''}, ${identity.nombre || ''}</div>
-        <div class="id-info">${[identity.ciudad, identity.fecha, identity.email, identity.celular].filter(Boolean).join('  ·  ')}</div>
+        <div class="id-name">${profile === 'worker' ? 'Trabajador/a' : 'Empleador/a'}</div>
+        <div class="id-info">${new Date().toLocaleDateString('es-AR', {day:'2-digit', month:'long', year:'numeric'})}</div>
         <span class="id-badge">${profileLabel}</span>
       </div>
     </div>
@@ -2251,7 +2188,7 @@ function generarPDF() {
       </div>
     </div>
     <div class="header-date" style="color:rgba(255,255,255,0.8);font-size:9pt">
-      ${identity.apellido || ''}, ${identity.nombre || ''}  ·  ${identity.ciudad || ''}
+      ${profile === 'worker' ? 'Trabajador/a' : 'Empleador/a'}  ·  ${dateStr}
     </div>
   </div>
 
