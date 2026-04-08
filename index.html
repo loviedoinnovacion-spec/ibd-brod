@@ -5,82 +5,66 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:;">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
-<title>IBD — Índice de Brecha Digital</title>
+<title>IBD — Índice de Brecha Digital · BROD</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg: #F0EEF8;
   --surface: #FFFFFF;
-  --surface2: #F7F5FD;
-  --surface3: #EDE9F8;
-  --border: rgba(120,100,200,0.12);
-  --border2: rgba(120,100,200,0.22);
-  --text: #2D2640;
-  --text2: #6B5F8A;
-  --text3: #A499C0;
-  --accent: #7C6BFA;
-  --accent-dim: rgba(124,107,250,0.10);
-  --accent2: #6354E0;
-  --dim-a: #7C6BFA;
-  --dim-a-dim: rgba(124,107,250,0.10);
-  --dim-b: #3BBFCF;
-  --dim-b-dim: rgba(59,191,207,0.10);
-  --dim-c: #F4845F;
-  --dim-c-dim: rgba(244,132,95,0.10);
-  --green: #52C98B;
-  --green-dim: rgba(82,201,139,0.12);
-  --amber: #F0B429;
-  --amber-dim: rgba(240,180,41,0.12);
-  --red: #F4845F;
-  --red-dim: rgba(244,132,95,0.12);
-  --purple: #9B7FE8;
-  --purple-dim: rgba(155,127,232,0.12);
-  --amber: #FFB830;
-  --amber-dim: rgba(255,184,48,0.12);
-  --red: #FF6B6B;
-  --red-dim: rgba(255,107,107,0.12);
-  --purple: #B388FF;
-  --purple-dim: rgba(179,136,255,0.12);
-  --r: 12px;
-  --r-sm: 8px;
+  --surface2: #F4F2FB;
+  --surface3: #EAE6F7;
+  --border: rgba(107,88,232,0.10);
+  --border2: rgba(107,88,232,0.20);
+  --text: #1A0A3C;
+  --text2: #4A3880;
+  --text3: #9B8FD4;
+  --accent: #6B58E8;
+  --accent-dim: rgba(107,88,232,0.10);
+  --accent2: #5040C8;
+  --accent-dark: #1A0A3C;
+  --teal: #2AAFAA;
+  --teal-dim: rgba(42,175,170,0.10);
+  --teal2: #1E8A86;
+  --dim-a: #6B58E8;
+  --dim-a-dim: rgba(107,88,232,0.10);
+  --dim-b: #2AAFAA;
+  --dim-b-dim: rgba(42,175,170,0.10);
+  --dim-c: #E8587A;
+  --dim-c-dim: rgba(232,88,122,0.10);
+  --green: #2AAFAA;
+  --green-dim: rgba(42,175,170,0.12);
+  --amber: #E8A030;
+  --amber-dim: rgba(232,160,48,0.12);
+  --red: #E8587A;
+  --red-dim: rgba(232,88,122,0.12);
+  --purple: #9B8FFF;
+  --purple-dim: rgba(155,143,255,0.12);
+  --r: 14px;
+  --r-sm: 9px;
   --font: 'Space Grotesk', sans-serif;
   --mono: 'Space Mono', monospace;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body {
-  font-family: var(--font);
-  background: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
-  font-size: 16px;
-  line-height: 1.6;
-}
+body { font-family: var(--font); background: var(--bg); color: var(--text); min-height: 100vh; font-size: 16px; line-height: 1.6; }
 
 /* ── LAYOUT ── */
 .app-shell { min-height: 100vh; display: flex; flex-direction: column; }
 .top-bar {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(240,238,248,0.88);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-  padding: 0 1.5rem; height: 56px;
+  background: #1A0A3C;
+  border-bottom: 2px solid #6B58E8;
+  padding: 0 1.5rem; height: 58px;
   display: flex; align-items: center; justify-content: space-between;
 }
-.logo { display: flex; align-items: center; gap: 10px; }
-.logo-mark {
-  width: 32px; height: 32px;
-  background: var(--accent);
-  border-radius: var(--r-sm);
-  display: flex; align-items: center; justify-content: center;
-}
-.logo-mark svg { width: 16px; height: 16px; fill: #fff; }
-.logo-text { font-size: 15px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); }
-.logo-sub { font-size: 12px; color: var(--text3); font-weight: 400; }
-.progress-track { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--text3); }
-.prog-bar { width: 120px; height: 3px; background: var(--surface3); border-radius: 2px; overflow: hidden; }
-.prog-fill { height: 100%; background: var(--accent); border-radius: 2px; transition: width 0.4s ease; }
+.logo { display: flex; align-items: center; gap: 0; }
+.logo-mark { display: flex; align-items: center; }
+.logo-text { font-size: 15px; font-weight: 700; letter-spacing: -0.02em; color: #fff; }
+.logo-sub { font-size: 11px; color: rgba(155,143,255,0.8); font-weight: 400; }
+.progress-track { display: flex; align-items: center; gap: 10px; font-size: 13px; color: rgba(155,143,255,0.8); }
+.prog-bar { width: 120px; height: 3px; background: rgba(107,88,232,0.3); border-radius: 2px; overflow: hidden; }
+.prog-fill { height: 100%; background: var(--teal); border-radius: 2px; transition: width 0.4s ease; }
 
 .main { flex: 1; display: flex; align-items: flex-start; justify-content: center; padding: 2rem 1rem 4rem; }
 .container { width: 100%; max-width: 640px; }
@@ -205,10 +189,10 @@ body {
 .btn:hover { background: var(--surface3); color: var(--text); border-color: var(--border2); }
 .btn:active { transform: scale(0.98); }
 .btn-primary {
-  background: var(--accent); color: #fff; border-color: var(--accent);
+  background: #1A0A3C; color: #fff; border-color: #1A0A3C;
   font-weight: 600;
 }
-.btn-primary:hover { background: var(--accent2); border-color: var(--accent2); }
+.btn-primary:hover { background: #6B58E8; border-color: #6B58E8; }
 .btn-primary:disabled {
   background: var(--surface3); border-color: var(--border);
   color: var(--text3); cursor: not-allowed; transform: none;
@@ -373,12 +357,13 @@ body {
 
 /* ── FOOTER ── */
 footer {
-  text-align: center; padding: 1.5rem;
-  font-size: 12px; color: var(--text3);
-  border-top: 1px solid var(--border);
-  background: var(--surface);
+  text-align: center; padding: 1.2rem 1.5rem;
+  font-size: 11px; color: rgba(155,143,255,0.7);
+  border-top: 1px solid rgba(107,88,232,0.3);
+  background: #1A0A3C;
   font-family: var(--mono);
 }
+footer strong { color: rgba(255,255,255,0.9); }
 
 /* ── IDENTITY FORM ── */
 .field-group { display: flex; flex-direction: column; gap: 14px; }
@@ -404,21 +389,14 @@ footer {
 @media (max-width: 420px) { .field-row { grid-template-columns: 1fr; } }
 
 /* ── WAVE CANVAS ── */
-#wave-canvas {
+/* ── MATRIX CANVAS ── */
+#matrix-canvas {
   position: fixed; top: 0; left: 0;
   width: 100%; height: 100%;
   pointer-events: none; z-index: 0;
-  opacity: 0; transition: opacity 1s ease;
+  opacity: 0.15;
 }
-#wave-canvas.visible { opacity: 0.35; }
-
-/* Welcome screen content needs backdrop when canvas is active */
-#s-welcome .hero h1,
-#s-welcome .hero p,
-#s-welcome .hero-eyebrow,
-#s-welcome .meta-row {
-  text-shadow: 0 1px 8px rgba(240,238,248,0.95);
-}
+.app-shell { position: relative; z-index: 1; }
 #s-welcome .card {
   background: rgba(255,255,255,0.92);
   backdrop-filter: blur(8px);
@@ -444,7 +422,150 @@ footer {
 </head>
 <body>
 
-<canvas id="wave-canvas"></canvas>
+<canvas id="matrix-canvas"></canvas>
+
+<!-- ══ SPLASH SCREEN ══ -->
+<div id="splash">
+  <div id="splash-content">
+    <div id="splash-logo">
+      <svg width="220" height="60" viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="22" width="8" height="30" rx="4" fill="#6B58E8"/>
+        <rect x="14" y="12" width="8" height="40" rx="4" fill="#2AAFAA"/>
+        <rect x="28" y="2" width="8" height="50" rx="4" fill="#6B58E8" opacity="0.5"/>
+        <path d="M4 52 Q22 26 32 4" stroke="#2AAFAA" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <text x="50" y="38" font-family="'Space Grotesk',sans-serif" font-size="32" font-weight="700" fill="white" letter-spacing="-1">BROD</text>
+        <text x="51" y="54" font-family="'Space Grotesk',sans-serif" font-size="10" font-weight="400" fill="rgba(155,143,255,0.7)" letter-spacing="0.6">BRECHAS Y OPORTUNIDADES DIGITALES</text>
+      </svg>
+    </div>
+
+    <div id="splash-headline">
+      <div id="splash-tag">Instrumento de relevamiento 2026</div>
+      <h1 id="splash-title">¿Estás preparado/a<br>para trabajar<br>con <span id="splash-accent">Inteligencia Artificial</span>?</h1>
+      <p id="splash-sub">Medí tu brecha digital en 10 minutos y recibí un plan de acción personalizado basado en evidencia científica.</p>
+    </div>
+
+    <div id="splash-stats">
+      <div class="splash-stat">
+        <div class="splash-stat-num">3</div>
+        <div class="splash-stat-label">Dimensiones</div>
+      </div>
+      <div class="splash-stat-divider"></div>
+      <div class="splash-stat">
+        <div class="splash-stat-num">10'</div>
+        <div class="splash-stat-label">De tu tiempo</div>
+      </div>
+      <div class="splash-stat-divider"></div>
+      <div class="splash-stat">
+        <div class="splash-stat-num">IBD</div>
+        <div class="splash-stat-label">Resultado inmediato</div>
+      </div>
+    </div>
+
+    <button id="splash-btn" onclick="enterApp()">
+      Comenzar diagnóstico
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" style="flex-shrink:0"><path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+
+    <div id="splash-footer">Desarrollado por <strong>BROD</strong> · Basado en SHRM (2025) y Anthropic (2026)</div>
+  </div>
+</div>
+
+<style>
+#matrix-canvas {
+  position: fixed; top:0; left:0; width:100%; height:100%;
+  z-index: 0; pointer-events:none;
+}
+#splash {
+  position: fixed; inset:0; z-index: 200;
+  background: #0D0520;
+  display: flex; align-items: center; justify-content: center;
+  padding: 1.5rem;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+#splash.exit {
+  opacity: 0; transform: scale(1.03);
+  pointer-events: none;
+}
+#splash-content {
+  max-width: 580px; width: 100%;
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; gap: 0;
+  animation: splashIn 1s ease forwards;
+}
+@keyframes splashIn {
+  from { opacity:0; transform: translateY(30px); }
+  to   { opacity:1; transform: translateY(0); }
+}
+#splash-logo {
+  margin-bottom: 2.5rem;
+  animation: splashIn 0.8s 0.1s ease both;
+}
+#splash-tag {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: #2AAFAA;
+  background: rgba(42,175,170,0.12);
+  border: 1px solid rgba(42,175,170,0.3);
+  padding: 4px 14px; border-radius: 20px;
+  margin-bottom: 1.4rem; display: inline-block;
+  animation: splashIn 0.8s 0.2s ease both;
+}
+#splash-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-weight: 700; line-height: 1.1;
+  letter-spacing: -0.04em; color: #fff;
+  margin-bottom: 1.2rem;
+  animation: splashIn 0.8s 0.3s ease both;
+}
+#splash-accent {
+  background: linear-gradient(90deg, #6B58E8, #2AAFAA);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+#splash-sub {
+  font-size: 16px; color: rgba(155,143,255,0.8);
+  line-height: 1.65; max-width: 440px;
+  margin: 0 auto 2.5rem;
+  animation: splashIn 0.8s 0.4s ease both;
+}
+#splash-stats {
+  display: flex; align-items: center; gap: 0;
+  background: rgba(107,88,232,0.12);
+  border: 1px solid rgba(107,88,232,0.25);
+  border-radius: 16px; padding: 1rem 2rem;
+  margin-bottom: 2rem; width: 100%; max-width: 400px;
+  justify-content: center;
+  animation: splashIn 0.8s 0.5s ease both;
+}
+.splash-stat { flex: 1; text-align: center; }
+.splash-stat-num {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.8rem; font-weight: 700; color: #fff;
+  line-height: 1;
+}
+.splash-stat-label { font-size: 11px; color: rgba(155,143,255,0.7); margin-top: 4px; }
+.splash-stat-divider { width: 1px; height: 40px; background: rgba(107,88,232,0.3); }
+#splash-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: linear-gradient(135deg, #6B58E8, #2AAFAA);
+  color: #fff; border: none; border-radius: 50px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px; font-weight: 600;
+  padding: 14px 32px; cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 4px 30px rgba(107,88,232,0.4);
+  margin-bottom: 1.5rem;
+  animation: splashIn 0.8s 0.6s ease both;
+}
+#splash-btn:hover { transform: scale(1.04); box-shadow: 0 6px 40px rgba(107,88,232,0.6); }
+#splash-btn:active { transform: scale(0.98); }
+#splash-footer {
+  font-size: 12px; color: rgba(155,143,255,0.45);
+  font-family: 'Space Mono', monospace;
+  animation: splashIn 0.8s 0.7s ease both;
+}
+#splash-footer strong { color: rgba(155,143,255,0.7); }
+</style>
 
 <div class="app-shell">
 
@@ -452,11 +573,14 @@ footer {
   <header class="top-bar">
     <div class="logo">
       <div class="logo-mark">
-        <svg viewBox="0 0 16 16"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/><rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1" opacity=".4"/></svg>
-      </div>
-      <div>
-        <div class="logo-text">IBD</div>
-        <div class="logo-sub">Brecha digital e IA</div>
+        <svg width="140" height="36" viewBox="0 0 140 36" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="14" width="5" height="18" rx="2.5" fill="#6B58E8"/>
+          <rect x="10" y="8" width="5" height="24" rx="2.5" fill="#2AAFAA"/>
+          <rect x="18" y="2" width="5" height="30" rx="2.5" fill="#6B58E8" opacity="0.45"/>
+          <path d="M4.5 32 Q15 16 20.5 4" stroke="#2AAFAA" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <text x="32" y="24" font-family="'Space Grotesk',sans-serif" font-size="18" font-weight="700" fill="white" letter-spacing="-0.5">BROD</text>
+          <text x="32" y="34" font-family="'Space Grotesk',sans-serif" font-size="7.5" font-weight="400" fill="rgba(155,143,255,0.75)" letter-spacing="0.4">BRECHAS Y OPORTUNIDADES DIGITALES</text>
+        </svg>
       </div>
     </div>
     <div class="progress-track" id="top-progress" style="display:none">
@@ -471,8 +595,12 @@ footer {
       <!-- ══ S0: BIENVENIDA ══ -->
       <div class="screen active" id="s-welcome">
         <div class="hero">
-          <h1><strong>Índice de Brecha Digital en el trabajo</strong></h1>
-          <p>Descubrí tu nivel de preparación frente a la Inteligencia Artificial en 10 minutos.</p>
+          <div style="display:inline-flex;align-items:center;gap:8px;background:#1A0A3C;color:#2AAFAA;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:1.2rem;border:1px solid rgba(42,175,170,0.3)">
+            <svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3.5" fill="#2AAFAA"/></svg>
+            Instrumento de relevamiento
+          </div>
+          <h1 style="font-size:2.2rem;font-weight:700;letter-spacing:-0.04em;line-height:1.1;margin-bottom:0.75rem;color:#1A0A3C"><strong>Índice de Brecha Digital</strong><br><span style="color:#6B58E8">en el trabajo</span></h1>
+          <p style="font-size:15px;color:var(--text2);max-width:420px;margin:0 auto 1.5rem;line-height:1.65">Descubrí tu nivel de preparación frente a la Inteligencia Artificial en 10 minutos.</p>
         </div>
 
         <div class="card">
@@ -896,8 +1024,8 @@ function renderQ() {
   document.getElementById('prog-fill').style.width = Math.round((qIdx / total) * 100) + '%';
   document.getElementById('prog-label').textContent = (qIdx + 1) + ' / ' + total;
 
-  const dimColors = {A:'#7C6BFA', B:'#00E5FF', C:'#FF6B6B'};
-  const dimBg = {A:'rgba(124,107,250,0.14)', B:'rgba(0,229,255,0.12)', C:'rgba(255,107,107,0.12)'};
+  const dimColors = {A:'#6B58E8', B:'#2AAFAA', C:'#E8587A'};
+  const dimBg = {A:'rgba(107,88,232,0.12)', B:'rgba(42,175,170,0.12)', C:'rgba(232,88,122,0.12)'};
 
   document.getElementById('q-header').innerHTML = `
     <div class="q-dim-tag dim-${q.dim}" style="background:${dimBg[q.dim]};color:${dimColors[q.dim]}">
@@ -1004,9 +1132,9 @@ function getLevel(score) {
 }
 
 function barColor(score) {
-  if (score <= 30) return '#F4845F';
+  if (score <= 30) return '#E8587A';
   if (score <= 50) return '#F0B429';
-  if (score <= 70) return '#3BBFCF';
+  if (score <= 70) return '#2AAFAA';
   if (score <= 85) return '#52C98B';
   return '#52C98B';
 }
@@ -1248,7 +1376,7 @@ function showResults() {
   const fbC = getDimFeedback('C', C, profile);
 
   // Helpers for dimension feedback cards
-  const dimColors = {A:{accent:'#7C6BFA',light:'rgba(124,107,250,0.14)'}, B:{accent:'#00E5FF',light:'rgba(0,229,255,0.12)'}, C:{accent:'#FF6B6B',light:'rgba(255,107,107,0.12)'}};
+  const dimColors = {A:{accent:'#6B58E8',light:'rgba(107,88,232,0.12)'}, B:{accent:'#2AAFAA',light:'rgba(42,175,170,0.12)'}, C:{accent:'#E8587A',light:'rgba(232,88,122,0.12)'}};
   const dimFbCard = (dim, label, score, fb) => `
     <div style="margin-bottom:16px">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
@@ -1415,496 +1543,122 @@ function scrollToTop() {
 }
 
 // ═══════════════════════════════════════════════════════════════
-//  CITY TRAFFIC ANIMATION
+//  MATRIX RAIN ANIMATION
 // ═══════════════════════════════════════════════════════════════
 (function() {
-  const canvas = document.getElementById('wave-canvas');
+  const canvas = document.getElementById('matrix-canvas');
   const ctx = canvas.getContext('2d');
-  let W, H, raf, running = false, t = 0;
+  let W, H, raf, running = false;
 
-  // ── PALETTE (pastel, soft on light bg) ─────────────────────
-  const SKY_TOP    = '#C8D8F0';
-  const SKY_BOT    = '#E8EFF8';
-  const SUN_COLOR  = '#FFE0A0';
-  const ROAD_DARK  = '#B0AABE';
-  const ROAD_MID   = '#C8C4D8';
-  const ROAD_LIGHT = '#DDD9E8';
-  const LANE_MARK  = 'rgba(255,255,255,0.7)';
-  const SIDEWALK   = '#D8D0EC';
-  const GRASS      = '#C8E8C0';
-
-  // Building palette
-  const BLDG_COLORS = [
-    '#C4B8E8','#B8D0E8','#E8C4B8','#C8E0C0','#E8D8B0',
-    '#D0C0E8','#B8C8D8','#E0C8C0','#C0D8C8','#D8C0D0',
-  ];
-
-  // ── BUILDINGS (generated once) ──────────────────────────────
-  let buildings = [];
-  function makeBuildings() {
-    buildings = [];
-    const count = Math.ceil(W / 55) + 2;
-    for (let i = 0; i < count; i++) {
-      const x = i * 54 - 40;
-      const w = 28 + Math.random() * 24;
-      const h = 60 + Math.random() * 140;
-      const color = BLDG_COLORS[Math.floor(Math.random() * BLDG_COLORS.length)];
-      const floors = Math.floor(h / 14);
-      const winsPerFloor = Math.floor((w - 8) / 12);
-      buildings.push({ x, w, h, color, floors, winsPerFloor });
-    }
-  }
-
-  // ── ROAD LAYOUT ─────────────────────────────────────────────
-  // roadY: top of road area. 6 lanes total (3 each direction).
-  let roadY, roadH, laneH, horizonY;
-
-  function layout() {
-    horizonY = H * 0.42;
-    roadY    = horizonY;
-    roadH    = H - roadY;
-    laneH    = roadH / 6;
-  }
-
-  // Lane centres (y coordinate of centre of each lane)
-  function laneY(laneIdx) { return roadY + (laneIdx + 0.5) * laneH; }
-
-  // ── CARS ────────────────────────────────────────────────────
-  // 6 lanes: 0-2 go RIGHT (bottom half), 3-5 go LEFT (top half of road)
-  // In a congested city: slow speeds, variable gaps, frequent stops
-  const CAR_COLORS = [
-    '#E8A0A0','#A0C0E8','#A0E0B0','#F0D090','#D0A8E8',
-    '#90C8D8','#E8C090','#B8E0A8','#E8B0C8','#A8B8E8',
-    '#F0B8A0','#A8D0B8','#E0A8D0','#B0D0E8','#E8D8A0',
-  ];
-
-  let cars = [];
-
-  function makeCars() {
-    cars = [];
-    for (let lane = 0; lane < 6; lane++) {
-      const goRight = lane < 3;
-      const density = 5 + Math.floor(Math.random() * 4); // cars per lane
-      for (let i = 0; i < density; i++) {
-        const carW = 36 + Math.random() * 20;
-        const carH = laneH * 0.55;
-        const x = goRight
-          ? (i / density) * W * 1.4 - carW
-          : W - (i / density) * W * 1.4;
-        const baseSpeed = goRight ? (0.18 + Math.random() * 0.25) : -(0.18 + Math.random() * 0.25);
-        cars.push({
-          lane, x, carW, carH,
-          color: CAR_COLORS[Math.floor(Math.random() * CAR_COLORS.length)],
-          speed: baseSpeed,
-          baseSpeed,
-          braking: false,
-          brakeTimer: 0,
-          brakeDuration: 0,
-          // Headlights / taillights
-          goRight,
-          // Slight lane wobble
-          wobble: Math.random() * Math.PI * 2,
-          wobbleSpeed: 0.008 + Math.random() * 0.006,
-          wobbleAmp: laneH * 0.04,
-        });
-      }
-    }
-  }
-
-  // ── TRAFFIC LIGHTS ──────────────────────────────────────────
-  let lights = [];
-  function makeLights() {
-    lights = [];
-    const positions = [0.22, 0.55, 0.82];
-    positions.forEach((xr, i) => {
-      lights.push({
-        x: xr * W,
-        phase: i * 90,          // stagger phases
-        cycleDuration: 300,     // frames for full red-green cycle
-        postH: roadH * 0.8,
-      });
-    });
-  }
-
-  function lightState(light, t) {
-    const phase = ((t + light.phase) % light.cycleDuration) / light.cycleDuration;
-    if (phase < 0.45) return 'red';
-    if (phase < 0.52) return 'yellow';
-    return 'green';
-  }
-
-  // ── PEDESTRIANS ─────────────────────────────────────────────
-  let pedestrians = [];
-  function makePedestrians() {
-    pedestrians = [];
-    for (let i = 0; i < 8; i++) {
-      pedestrians.push({
-        x: Math.random() * W,
-        xRatio: Math.random(),
-        side: Math.random() > 0.5 ? 'top' : 'bottom', // sidewalk
-        speed: (Math.random() * 0.4 + 0.2) * (Math.random() > 0.5 ? 1 : -1),
-        stride: 0,
-        color: CAR_COLORS[Math.floor(Math.random() * CAR_COLORS.length)],
-        wait: 0,
-      });
-    }
-  }
-
-  // ── DRAW FUNCTIONS ───────────────────────────────────────────
-
-  function drawSky() {
-    const grad = ctx.createLinearGradient(0, 0, 0, horizonY);
-    grad.addColorStop(0, SKY_TOP);
-    grad.addColorStop(1, SKY_BOT);
-    ctx.fillStyle = grad;
-    ctx.fillRect(0, 0, W, horizonY);
-
-    // Sun
-    const sunX = W * 0.82, sunY = horizonY * 0.22, sunR = 28;
-    const sunGrad = ctx.createRadialGradient(sunX, sunY, 2, sunX, sunY, sunR * 2.5);
-    sunGrad.addColorStop(0, 'rgba(255,230,140,0.9)');
-    sunGrad.addColorStop(0.4, 'rgba(255,210,100,0.4)');
-    sunGrad.addColorStop(1, 'rgba(255,210,100,0)');
-    ctx.fillStyle = sunGrad;
-    ctx.beginPath(); ctx.arc(sunX, sunY, sunR * 2.5, 0, Math.PI * 2); ctx.fill();
-    ctx.fillStyle = SUN_COLOR;
-    ctx.beginPath(); ctx.arc(sunX, sunY, sunR, 0, Math.PI * 2); ctx.fill();
-  }
-
-  function drawBuildings() {
-    const groundY = horizonY;
-    buildings.forEach(b => {
-      // Shadow
-      ctx.fillStyle = 'rgba(0,0,0,0.06)';
-      ctx.fillRect(b.x + 4, groundY - b.h + 4, b.w, b.h);
-      // Body
-      ctx.fillStyle = b.color;
-      ctx.fillRect(b.x, groundY - b.h, b.w, b.h);
-      // Roof accent
-      ctx.fillStyle = 'rgba(0,0,0,0.08)';
-      ctx.fillRect(b.x, groundY - b.h, b.w, 4);
-      // Windows
-      for (let fl = 0; fl < b.floors; fl++) {
-        for (let wi = 0; wi < b.winsPerFloor; wi++) {
-          const wx = b.x + 5 + wi * 12;
-          const wy = groundY - b.h + 10 + fl * 14;
-          if (wy + 7 < groundY) {
-            // Randomize window light — warm yellow or cool blue
-            const lit = Math.sin(t * 0.003 + fl * 1.3 + wi * 2.1 + b.x * 0.01) > 0.1;
-            ctx.fillStyle = lit ? 'rgba(255,240,180,0.75)' : 'rgba(180,200,230,0.35)';
-            ctx.fillRect(wx, wy, 7, 8);
-          }
-        }
-      }
-    });
-  }
-
-  function drawRoad() {
-    // Sidewalk top
-    ctx.fillStyle = SIDEWALK;
-    ctx.fillRect(0, roadY, W, laneH * 0.35);
-    // Grass strip
-    ctx.fillStyle = GRASS;
-    ctx.fillRect(0, roadY, W, laneH * 0.12);
-
-    // Road body — gradient for depth
-    const rGrad = ctx.createLinearGradient(0, roadY, 0, H);
-    rGrad.addColorStop(0, ROAD_DARK);
-    rGrad.addColorStop(0.5, ROAD_MID);
-    rGrad.addColorStop(1, ROAD_LIGHT);
-    ctx.fillStyle = rGrad;
-    ctx.fillRect(0, roadY, W, roadH);
-
-    // Centre divider (double yellow line)
-    const cy = roadY + laneH * 3;
-    ctx.strokeStyle = 'rgba(240,180,60,0.7)';
-    ctx.lineWidth = 2; ctx.setLineDash([]);
-    ctx.beginPath(); ctx.moveTo(0, cy - 2); ctx.lineTo(W, cy - 2); ctx.stroke();
-    ctx.beginPath(); ctx.moveTo(0, cy + 2); ctx.lineTo(W, cy + 2); ctx.stroke();
-
-    // Lane dashes
-    ctx.strokeStyle = LANE_MARK;
-    ctx.lineWidth = 1.5;
-    ctx.setLineDash([24, 18]);
-    for (let ln = 1; ln < 6; ln++) {
-      if (ln === 3) continue; // skip centre — already drawn
-      const ly = roadY + laneH * ln;
-      ctx.beginPath(); ctx.moveTo(0, ly); ctx.lineTo(W, ly); ctx.stroke();
-    }
-    ctx.setLineDash([]);
-
-    // Sidewalk bottom
-    ctx.fillStyle = SIDEWALK;
-    ctx.fillRect(0, H - laneH * 0.3, W, laneH * 0.3);
-    ctx.fillStyle = GRASS;
-    ctx.fillRect(0, H - laneH * 0.12, W, laneH * 0.12);
-
-    // Kerb lines
-    ctx.strokeStyle = 'rgba(180,170,200,0.5)';
-    ctx.lineWidth = 1; ctx.setLineDash([]);
-    ctx.beginPath(); ctx.moveTo(0, roadY + laneH * 0.35); ctx.lineTo(W, roadY + laneH * 0.35); ctx.stroke();
-    ctx.beginPath(); ctx.moveTo(0, H - laneH * 0.3); ctx.lineTo(W, H - laneH * 0.3); ctx.stroke();
-  }
-
-  function drawTrafficLights(time) {
-    lights.forEach(light => {
-      const state = lightState(light, time);
-      const postX = light.x;
-      const postTop = roadY - light.postH;
-
-      // Post
-      ctx.fillStyle = 'rgba(100,90,120,0.7)';
-      ctx.fillRect(postX - 1.5, postTop, 3, light.postH);
-
-      // Box
-      const bw = 14, bh = 32;
-      const bx = postX - bw / 2;
-      const by = postTop - 4;
-      ctx.fillStyle = 'rgba(60,55,80,0.85)';
-      ctx.beginPath();
-      ctx.roundRect(bx, by, bw, bh, 3);
-      ctx.fill();
-
-      // Lights
-      const colors = { red: '#FF7070', yellow: '#FFD060', green: '#70D890' };
-      const off = { red: '#8B4040', yellow: '#8B7030', green: '#306040' };
-      ['red','yellow','green'].forEach((c, i) => {
-        const active = state === c;
-        const glow = active ? ctx.createRadialGradient(postX, by+6+i*10, 1, postX, by+6+i*10, 7) : null;
-        if (glow) {
-          glow.addColorStop(0, colors[c]);
-          glow.addColorStop(1, 'rgba(255,255,255,0)');
-          ctx.fillStyle = glow;
-          ctx.beginPath(); ctx.arc(postX, by+6+i*10, 8, 0, Math.PI*2); ctx.fill();
-        }
-        ctx.fillStyle = active ? colors[c] : off[c];
-        ctx.beginPath(); ctx.arc(postX, by+6+i*10, 4, 0, Math.PI*2); ctx.fill();
-      });
-
-      // Zebra crossing below light
-      ctx.fillStyle = 'rgba(255,255,255,0.18)';
-      for (let z = 0; z < 4; z++) {
-        ctx.fillRect(postX - 18 + z * 10, roadY + laneH * 0.35, 6, laneH * 2.8);
-      }
-    });
-  }
-
-  function drawCar(car, time) {
-    const cy = laneY(car.lane) + Math.sin(car.wobble + time * car.wobbleSpeed) * car.wobbleAmp;
-    const x = car.x;
-    const w = car.carW, h = car.carH;
-
-    // Body shadow
-    ctx.fillStyle = 'rgba(0,0,0,0.10)';
-    ctx.beginPath();
-    ctx.ellipse(x + w/2, cy + h*0.52, w*0.45, h*0.18, 0, 0, Math.PI*2);
-    ctx.fill();
-
-    // Body
-    ctx.fillStyle = car.color;
-    ctx.beginPath();
-    ctx.roundRect(x, cy - h/2, w, h, h * 0.22);
-    ctx.fill();
-
-    // Roof cabin
-    const cabinW = w * 0.52, cabinH = h * 0.42;
-    const cabinX = car.goRight ? x + w * 0.24 : x + w * 0.24;
-    ctx.fillStyle = 'rgba(0,0,0,0.12)';
-    ctx.beginPath();
-    ctx.roundRect(cabinX, cy - h/2 - cabinH + 2, cabinW, cabinH, h * 0.15);
-    ctx.fill();
-    // Windshield
-    ctx.fillStyle = 'rgba(180,210,240,0.55)';
-    ctx.beginPath();
-    ctx.roundRect(cabinX + 2, cy - h/2 - cabinH + 4, cabinW - 4, cabinH - 4, h * 0.1);
-    ctx.fill();
-
-    // Headlights / taillights
-    if (car.goRight) {
-      // Headlights (front = right side)
-      ctx.fillStyle = 'rgba(255,250,200,0.9)';
-      ctx.beginPath(); ctx.ellipse(x + w - 3, cy - h*0.15, 3, 2.5, 0, 0, Math.PI*2); ctx.fill();
-      ctx.beginPath(); ctx.ellipse(x + w - 3, cy + h*0.15, 3, 2.5, 0, 0, Math.PI*2); ctx.fill();
-      // Taillights
-      ctx.fillStyle = car.braking ? 'rgba(255,80,80,0.95)' : 'rgba(200,60,60,0.6)';
-      ctx.beginPath(); ctx.ellipse(x + 3, cy - h*0.15, 3, 2.5, 0, 0, Math.PI*2); ctx.fill();
-      ctx.beginPath(); ctx.ellipse(x + 3, cy + h*0.15, 3, 2.5, 0, 0, Math.PI*2); ctx.fill();
-    } else {
-      ctx.fillStyle = 'rgba(255,250,200,0.9)';
-      ctx.beginPath(); ctx.ellipse(x + 3, cy - h*0.15, 3, 2.5, 0, 0, Math.PI*2); ctx.fill();
-      ctx.beginPath(); ctx.ellipse(x + 3, cy + h*0.15, 3, 2.5, 0, 0, Math.PI*2); ctx.fill();
-      ctx.fillStyle = car.braking ? 'rgba(255,80,80,0.95)' : 'rgba(200,60,60,0.6)';
-      ctx.beginPath(); ctx.ellipse(x + w - 3, cy - h*0.15, 3, 2.5, 0, 0, Math.PI*2); ctx.fill();
-      ctx.beginPath(); ctx.ellipse(x + w - 3, cy + h*0.15, 3, 2.5, 0, 0, Math.PI*2); ctx.fill();
-    }
-
-    // Wheels
-    ctx.fillStyle = 'rgba(60,50,70,0.8)';
-    [x + w*0.18, x + w*0.75].forEach(wx => {
-      ctx.beginPath(); ctx.ellipse(wx, cy + h*0.46, h*0.22, h*0.22, 0, 0, Math.PI*2); ctx.fill();
-      ctx.fillStyle = 'rgba(180,170,200,0.6)';
-      ctx.beginPath(); ctx.ellipse(wx, cy + h*0.46, h*0.1, h*0.1, 0, 0, Math.PI*2); ctx.fill();
-      ctx.fillStyle = 'rgba(60,50,70,0.8)';
-    });
-  }
-
-  function drawPedestrian(ped) {
-    const y = ped.side === 'top'
-      ? roadY + laneH * 0.2
-      : H - laneH * 0.18;
-    const x = ped.x;
-    const s = 0.5 + 0.5 * Math.abs(Math.sin(ped.stride));
-
-    // Body
-    ctx.fillStyle = ped.color;
-    ctx.beginPath(); ctx.ellipse(x, y, 4, 6, 0, 0, Math.PI*2); ctx.fill();
-    // Head
-    ctx.fillStyle = '#F5D5B0';
-    ctx.beginPath(); ctx.arc(x, y - 8, 4, 0, Math.PI*2); ctx.fill();
-    // Legs (stride animation)
-    ctx.strokeStyle = ped.color;
-    ctx.lineWidth = 2; ctx.setLineDash([]);
-    ctx.beginPath();
-    ctx.moveTo(x - 2, y + 4);
-    ctx.lineTo(x - 4 + s*4, y + 10);
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(x + 2, y + 4);
-    ctx.lineTo(x + 4 - s*4, y + 10);
-    ctx.stroke();
-  }
-
-  // ── PHYSICS UPDATE ──────────────────────────────────────────
-  function updateCars(time) {
-    // Check each car against lights and cars ahead
-    cars.forEach((car, idx) => {
-      // Traffic light braking
-      let shouldBrake = false;
-      lights.forEach(light => {
-        const state = lightState(light, time);
-        if (state === 'red' || state === 'yellow') {
-          const dist = car.goRight
-            ? light.x - (car.x + car.carW)
-            : car.x - light.x;
-          if (dist > 0 && dist < 55) shouldBrake = true;
-        }
-      });
-
-      // Car-following braking (congestion)
-      cars.forEach((other, oi) => {
-        if (oi === idx || other.lane !== car.lane) return;
-        const gap = car.goRight
-          ? (other.x - (car.x + car.carW))
-          : (car.x - (other.x + other.carW));
-        if (gap > 0 && gap < 28 + car.carW * 0.3) shouldBrake = true;
-      });
-
-      // Random braking events (city traffic unpredictability)
-      if (!car.braking && Math.random() < 0.0008) {
-        car.braking = true;
-        car.brakeDuration = 40 + Math.random() * 120;
-        car.brakeTimer = 0;
-      }
-      if (car.braking) {
-        car.brakeTimer++;
-        if (car.brakeTimer >= car.brakeDuration) car.braking = false;
-      }
-
-      const targetSpeed = (shouldBrake || car.braking)
-        ? car.baseSpeed * (0.05 + Math.random() * 0.08)
-        : car.baseSpeed;
-
-      // Smooth speed transition
-      car.speed += (targetSpeed - car.speed) * 0.06;
-
-      car.x += car.speed;
-
-      // Wrap around
-      if (car.goRight && car.x > W + 60)  car.x = -car.carW - 10;
-      if (!car.goRight && car.x < -car.carW - 60) car.x = W + 10;
-    });
-  }
-
-  function updatePedestrians() {
-    pedestrians.forEach(ped => {
-      if (ped.wait > 0) { ped.wait--; return; }
-      ped.x += ped.speed;
-      ped.stride += 0.18;
-      if (ped.x > W + 20)  { ped.x = -10; ped.wait = Math.random() * 60 | 0; }
-      if (ped.x < -20)     { ped.x = W + 10; ped.wait = Math.random() * 60 | 0; }
-    });
-  }
-
-  // ── HEAT SHIMMER OVERLAY ────────────────────────────────────
-  function drawHeatShimmer(time) {
-    // Very subtle shimmer above road horizon
-    const shimH = 12;
-    for (let x = 0; x < W; x += 4) {
-      const offset = Math.sin(x * 0.04 + time * 0.03) * 1.5;
-      ctx.fillStyle = 'rgba(230,220,255,0.04)';
-      ctx.fillRect(x, horizonY - shimH + offset, 4, shimH);
-    }
-  }
-
-  // ── MAIN FRAME ───────────────────────────────────────────────
-  function frame() {
-    if (!running) return;
-    t++;
-    ctx.clearRect(0, 0, W, H);
-
-    drawSky();
-    drawBuildings();
-    drawRoad();
-
-    // Sort cars back-to-front by lane (lower lanes closer)
-    const sortedCars = [...cars].sort((a,b) => a.lane - b.lane);
-    sortedCars.forEach(car => drawCar(car, t));
-
-    drawTrafficLights(t);
-    pedestrians.forEach(drawPedestrian);
-    drawHeatShimmer(t);
-
-    updateCars(t);
-    updatePedestrians();
-
-    raf = requestAnimationFrame(frame);
-  }
+  // Characters — mix of digits, binary and katakana for tech feel
+  const CHARS = '01アイウエオカキクケコサシスセソタチツテトナニヌネノ0110100111001010111000101101001';
+  const COLS_DATA = [];
+  const FONT_SIZE = 14;
+  const COLORS = ['#6B58E8','#2AAFAA','#9B8FFF','#7EEAE4','#4A38B8','#1E8A86'];
 
   function resize() {
     W = canvas.width  = window.innerWidth;
     H = canvas.height = window.innerHeight;
-    layout();
-    makeCars();
-    makeBuildings();
-    makeLights();
-    makePedestrians();
+    const cols = Math.floor(W / FONT_SIZE);
+    COLS_DATA.length = 0;
+    for (let i = 0; i < cols; i++) {
+      COLS_DATA.push({
+        y: Math.random() * -H,
+        speed: FONT_SIZE * (0.4 + Math.random() * 1.2),
+        color: COLORS[Math.floor(Math.random() * COLORS.length)],
+        len: 6 + Math.floor(Math.random() * 20),
+        chars: [],
+        timer: 0,
+        changeEvery: 3 + Math.floor(Math.random() * 8),
+      });
+      for (let j = 0; j < 30; j++) {
+        COLS_DATA[i].chars.push(CHARS[Math.floor(Math.random() * CHARS.length)]);
+      }
+    }
+  }
+
+  function frame() {
+    if (!running) return;
+
+    // Fade trail
+    ctx.fillStyle = 'rgba(13,5,32,0.18)';
+    ctx.fillRect(0, 0, W, H);
+
+    ctx.font = `${FONT_SIZE}px 'Space Mono', monospace`;
+
+    COLS_DATA.forEach((col, ci) => {
+      col.timer++;
+      if (col.timer >= col.changeEvery) {
+        col.timer = 0;
+        const idx = Math.floor(Math.random() * col.chars.length);
+        col.chars[idx] = CHARS[Math.floor(Math.random() * CHARS.length)];
+      }
+
+      const x = ci * FONT_SIZE;
+      for (let j = 0; j < col.len; j++) {
+        const y = col.y - j * FONT_SIZE;
+        if (y < 0 || y > H) continue;
+        const alpha = j === 0 ? 1 : Math.max(0, 1 - j / col.len);
+        const char = col.chars[j % col.chars.length];
+        if (j === 0) {
+          // Head — bright white
+          ctx.fillStyle = `rgba(255,255,255,${alpha})`;
+        } else if (j < 3) {
+          // Near head — accent color bright
+          ctx.fillStyle = col.color.replace(')', `,${alpha})`).replace('rgb(', 'rgba(');
+          ctx.fillStyle = col.color + Math.round(alpha * 255).toString(16).padStart(2,'0');
+        } else {
+          // Tail — dimmer
+          const hex = Math.round(alpha * 0.7 * 255).toString(16).padStart(2,'0');
+          ctx.fillStyle = col.color + hex;
+        }
+        ctx.fillText(char, x, y);
+      }
+
+      col.y += col.speed;
+      if (col.y - col.len * FONT_SIZE > H) {
+        col.y = -FONT_SIZE * (2 + Math.random() * 10);
+        col.speed = FONT_SIZE * (0.4 + Math.random() * 1.2);
+        col.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+        col.len = 6 + Math.floor(Math.random() * 20);
+      }
+    });
+
+    raf = requestAnimationFrame(frame);
   }
 
   function start() {
     if (running) return;
     running = true;
     resize();
-    canvas.classList.add('visible');
     frame();
   }
 
   function stop() {
     running = false;
-    canvas.classList.remove('visible');
     cancelAnimationFrame(raf);
-    ctx.clearRect(0, 0, W, H);
   }
 
   window.addEventListener('resize', () => { if (running) resize(); });
+  window.addEventListener('load', () => start());
 
+  // Keep running on welcome screen too — visible through splash
   const _switchScreen = switchScreen;
   window.switchScreen = function(id) {
     _switchScreen(id);
-    id === 's-welcome' ? start() : stop();
   };
-
-  window.addEventListener('load', () => setTimeout(start, 200));
 })();
+
+// ═══════════════════════════════════════════════════════════════
+//  SPLASH → APP TRANSITION
+// ═══════════════════════════════════════════════════════════════
+function enterApp() {
+  const splash = document.getElementById('splash');
+  splash.classList.add('exit');
+  setTimeout(() => {
+    splash.style.display = 'none';
+  }, 850);
+}
 </script>
 
 <script>
@@ -1921,16 +1675,16 @@ function generarPDF() {
   const profileLabel = profile === 'worker' ? 'Trabajador/a' : 'Empleador/a';
 
   const dims = [
-    { letter:'A', label:'Acceso tecnológico',   score:A,  colorHex:'#7C6BFA', colorRgb:'124,107,250' },
-    { letter:'B', label:'Habilidades digitales', score:B,  colorHex:'#3BBFCF', colorRgb:'59,191,207'  },
-    { letter:'C', label:cLabel,                  score:Cs, colorHex:'#F4845F', colorRgb:'244,132,95'  },
+    { letter:'A', label:'Acceso tecnológico',   score:A,  colorHex:'#6B58E8', colorRgb:'107,88,232' },
+    { letter:'B', label:'Habilidades digitales', score:B,  colorHex:'#2AAFAA', colorRgb:'42,175,170'  },
+    { letter:'C', label:cLabel,                  score:Cs, colorHex:'#E8587A', colorRgb:'232,88,122'  },
   ];
 
   const levelColor = score => {
-    if (score <= 30) return '#C0503A';
-    if (score <= 50) return '#9A6B00';
-    if (score <= 70) return '#3B6BBF';
-    return '#2A8060';
+    if (score <= 30) return '#E8587A';
+    if (score <= 50) return '#E8A030';
+    if (score <= 70) return '#2AAFAA';
+    return '#2AAFAA';
   };
   const levelBg = score => {
     if (score <= 30) return '#FAEAEA';
@@ -2024,7 +1778,7 @@ function generarPDF() {
   .page:last-child { page-break-after:avoid; }
 
   /* ── HEADER ── */
-  .header { background:#7C6BFA; padding:14mm 16mm 12mm; display:flex; align-items:center; justify-content:space-between; }
+  .header { background:#1A0A3C; padding:14mm 16mm 12mm; display:flex; align-items:center; justify-content:space-between; }
   .header-left { display:flex; align-items:center; gap:12px; }
   .logo-grid { display:grid; grid-template-columns:1fr 1fr; gap:3px; width:22px; }
   .logo-sq { width:9px; height:9px; background:#fff; border-radius:2px; }
@@ -2042,7 +1796,7 @@ function generarPDF() {
 
   /* ── IDENTITY ── */
   .identity { display:flex; align-items:center; gap:14px; background:#F7F5FD; border-radius:10px; padding:12px 14px; margin-bottom:10px; border:1px solid #EDE9F8; }
-  .avatar { width:44px; height:44px; border-radius:50%; background:#7C6BFA; display:flex; align-items:center; justify-content:center; font-size:14pt; font-weight:700; color:#fff; flex-shrink:0; }
+  .avatar { width:44px; height:44px; border-radius:50%; background:#1A0A3C; display:flex; align-items:center; justify-content:center; font-size:14pt; font-weight:700; color:#fff; flex-shrink:0; }
   .id-name { font-size:13pt; font-weight:600; color:#2D2640; }
   .id-info { font-size:8.5pt; color:#6B5F8A; margin-top:3px; }
   .id-badge { display:inline-block; margin-top:5px; font-size:8pt; background:#EDE9F8; color:#7C6BFA; padding:2px 10px; border-radius:20px; font-weight:500; }
@@ -2101,7 +1855,7 @@ function generarPDF() {
   .res-dot { width:7px; height:7px; border-radius:50%; flex-shrink:0; }
 
   /* ── FOOTER ── */
-  .footer { background:#7C6BFA; padding:6px 16mm; display:flex; align-items:center; justify-content:space-between; position:absolute; bottom:0; left:0; right:0; }
+  .footer { background:#1A0A3C; padding:6px 16mm; display:flex; align-items:center; justify-content:space-between; position:absolute; bottom:0; left:0; right:0; }
   .footer span { font-size:7pt; color:rgba(255,255,255,0.7); }
   .footer strong { color:#fff; }
 
